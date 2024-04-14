@@ -15,7 +15,7 @@ copyright = "&copy; 2023 Congo contributors"
 [params.author]
   name = "Congo"
   image = "img/author.jpg"
-  headline = "非凡的主题！"
+  headline = "Kevin Fu！"
   bio = "这是一个作者简介示例，虽然这里有一张狗的库存照片，但实际上这篇文章是由人创建的。 :dog:"
   links = [
     { x-twitter = "https://twitter.com/" },
