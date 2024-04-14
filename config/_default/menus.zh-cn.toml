@@ -20,8 +20,15 @@
   pageRef = "users"
   weight = 30
   [main.params]
-    icon = "github"
+    icon = "human3"
     showname = false
+
+[[main]]
+  name = "标签"
+  pageRef = "tags"
+  weight = 40
+  [main.params]
+    icon = "tag"
 
 [[main]]
   identifier = "搜索"
@@ -38,8 +45,3 @@
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
 # the copyright notice. Configure as per the main menu above.
-
-[[main]]
-  name = "标签"
-  pageRef = "tags"
-  weight = 40
