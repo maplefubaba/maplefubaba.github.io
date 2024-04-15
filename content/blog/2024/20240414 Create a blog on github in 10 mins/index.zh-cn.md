@@ -67,9 +67,36 @@ hugo server
 ### commit&push到github
 在github里创建代码库maplefubaba.github.io，这个名字的格式是固定的，以后也是可以直接访问的域名。
 ![Create new repo](create.new.repo.png)
+![Steps to push](steps.to.push.png)
 
 ### github上设定
+接着可以设定github上的actions，相当于自动在github的服务器上运行hugo来生成网页并且把他们放到github pages里面。
 
+下面是在github里面设置actions：
+![Actions S1](actions.s1.png)
+搜索hugo
+![Actions S2](actions.s2.png)
+设置hugo的action
+![Actions S3](actions.s3.png)
+保存commit
+![Actions S4](actions.s4.png)
+![Actions S5](actions.s5.png)
+可以直接在github上看到在根目录下创建了.github/workflows/hugo.yml文件
+![Actions S6](actions.s6.png)
 
+## 直接访问域名
+图片
+
+## 开始
+
+从example site里面把文件拷贝出来。
+
+### 中英双语
+- 删除文件
+- 设置
+
+### 其他设置变更
+- 主菜单
+- 目录
 
 [References]
