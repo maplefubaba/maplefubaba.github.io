@@ -3,20 +3,20 @@ languageName = "English"
 languageDirection = "ltr"
 weight = 2
 
-title = "Congo"
+title = "Maplefubaba"
 copyright = "&copy; 2024 Kevin Fu"
 
 [params]
   dateFormat = "2 January 2006"
 
   mainSections = ["blog"]
-  description = "A powerful, lightweight theme for Hugo built with Tailwind CSS."
+  description = "Blog"
 
 [params.author]
   name = "Kevin Fu"
   image = "img/author.jpg"
-  headline = "Not your ordinary theme!"
-  bio = "Sofware developer/Investor/Dreamer"
+  headline = "Welcome to my blog!"
+  bio = "Sofware developer/Engineer/Investor/Dreamer"
   links = [
     { youtube = "https://www.youtube.com/channel/UCBogzranpJg2nn42gUFFeIg" },
   ]

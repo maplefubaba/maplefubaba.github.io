@@ -8,8 +8,7 @@ cascade:
 ---
 
 {{< lead >}}
-Congo让您的内容栩栩如生。 :heart_eyes:
+[博客标签]({{< ref "tags" >}})
 {{< /lead >}}
-
 
 ---

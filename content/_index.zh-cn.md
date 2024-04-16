@@ -1,5 +1,5 @@
 ---
-title: "欢迎使用Congo! :tada:"
+title: "欢迎来到我的博客! :tada:"
 description: "这是一个基于Hugo的主题Congo示例。"
 ---
 

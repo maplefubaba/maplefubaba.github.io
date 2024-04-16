@@ -15,8 +15,8 @@ copyright = "&copy; 2024 枫叶老付"
 [params.author]
   name = "老付"
   image = "img/author.jpg"
-  headline = ""
+  headline = "欢迎来我的博客！"
   bio = "程序员/工程师/投资者/梦想家"
   links = [
-    { youtube = "https://youtube.com/" },
+    { youtube = "https://www.youtube.com/channel/UCBogzranpJg2nn42gUFFeIg" },
   ]
