@@ -4,6 +4,7 @@
 
 theme = "congo"
 defaultContentLanguage = "zh-cn"
+hasCJKLanguage = true
 
 enableRobotsTXT = true
 paginate = 15
