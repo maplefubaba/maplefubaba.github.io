@@ -2,7 +2,7 @@
 title: "10分钟在github上创建一个博客"
 date: 2024-04-14
 description: "这是怎么回事"
-summary: "测试"
+summary: "如何在github上快速创建一个博客？"
 tags: ["git"]
 ---
 
@@ -89,14 +89,207 @@ hugo server
 
 ## 开始
 
-从example site里面把文件拷贝出来。
+从themes/congo/exampleSite里面把文件拷贝到博客的根目录下，现在可以把content目录下的内容都删掉。博客的文章内容都是在content目录下，然后在content新建一个blog目录。
 
 ### 中英双语
-- 删除文件
-- 设置
+
+congo主题支持多种语言，比如我希望网站同时支持中文（zh-cn）和英文（en），下面我们需要修改一些设置。
 
 ### 其他设置变更
-- 主菜单
-- 目录
+
+![Config file diff](config.files.diff.png)
+
+config.tmol
+```
+# -- Site Configuration --
+# Refer to the theme docs for more details about each of these parameters.
+# https://jpanther.github.io/congo/docs/getting-started/
+
+theme = "congo"
+defaultContentLanguage = "zh-cn"	<- change default website language
+hasCJKLanguage = true  				<- add this to fix wordcount and read time estimate
+
+enableRobotsTXT = true
+paginate = 15
+summaryLength = 0
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+```
+
+params.toml
+```
+...
+[homepage]
+  #layout = "custom" # valid options: page, profile, custom
+  layout = "profile" # valid options: page, profile, custom   <- I'd like to use profile
+  showRecent = true
+  recentLimit = 5
+...
+
+[article]
+...
+  showWordCount = true										  <- show word count 
+...
+```
+
+languages.zh-cn.toml
+```
+languageCode = "zh-cn"
+languageName = "简体中文"
+languageDirection = "ltr"
+weight = 1
+
+title = "枫叶老付"
+copyright = "&copy; 2024 枫叶老付"
+
+[params]
+  dateFormat = "2006年1月2日"
+
+  mainSections = ["blog"]
+  description = "博客"
+
+[params.author]
+  name = "老付"
+  image = "img/author.jpg"
+  headline = "欢迎来我的博客！"
+  bio = "程序员/工程师/投资者/梦想家"
+  links = [
+    { youtube = "https://www.youtube.com/channel/UCBogzranpJg2nn42gUFFeIg" },
+  ]
+```
+
+languages.en.toml
+```
+languageCode = "en"
+languageName = "English"
+languageDirection = "ltr"
+weight = 2
+
+title = "Maplefubaba"
+copyright = "&copy; 2024 Kevin Fu"
+
+[params]
+  dateFormat = "2 January 2006"
+
+  mainSections = ["blog"]
+  description = "Blog"
+
+[params.author]
+  name = "Kevin Fu"
+  image = "img/author.jpg"
+  headline = "Welcome to my blog!"
+  bio = "Sofware developer/Engineer/Investor/Dreamer"
+  links = [
+    { youtube = "https://www.youtube.com/channel/UCBogzranpJg2nn42gUFFeIg" },
+  ]
+```
+
+menus.zh-cn.toml
+```
+# -- Main Menu --
+# The main menu is displayed in the header at the top of the page.
+# Acceptable parameters are name, pageRef, page, url, title, weight.
+#
+# The simplest menu configuration is to provide:
+#   name = The name to be displayed for this menu link
+#   pageRef = The identifier of the page or section to link to
+#
+# By default the menu is ordered alphabetically. This can be
+# overridden by providing a weight value. The menu will then be
+# ordered by weight from lowest to highest.
+
+[[main]]
+  name = "博客"
+  pageRef = "blog"
+  weight = 20
+
+[[main]]
+  name = "介绍"
+  pageRef = "users"
+  weight = 30
+  [main.params]
+    icon = "human3"
+    showname = false
+
+[[main]]
+  name = "标签"
+  pageRef = "tags"
+  weight = 40
+  [main.params]
+    icon = "tag"
+
+[[main]]
+  identifier = "搜索"
+  weight = 99
+  [main.params]
+    action = "search"
+
+[[main]]
+  identifier = "语言"
+  weight = 100
+  [main.params]
+    action = "locale"
+
+# -- Footer Menu --
+# The footer menu is displayed at the bottom of the page, just before
+# the copyright notice. Configure as per the main menu above.
+```
+
+menus.en.toml
+```
+# -- Main Menu --
+# The main menu is displayed in the header at the top of the page.
+# Acceptable parameters are name, pageRef, page, url, title, weight.
+#
+# The simplest menu configuration is to provide:
+#   name = The name to be displayed for this menu link
+#   pageRef = The identifier of the page or section to link to
+#
+# By default the menu is ordered alphabetically. This can be
+# overridden by providing a weight value. The menu will then be
+# ordered by weight from lowest to highest.
+
+[[main]]
+  name = "Blog"
+  pageRef = "blog"
+  weight = 20
+
+[[main]]
+  name = "About Me"
+  pageRef = "users"
+  weight = 30
+  [main.params]
+    icon = "human3"
+    showname = false
+
+[[main]]
+  name = "Tags"
+  pageRef = "tags"
+  weight = 40
+  [main.params]
+    icon = "tag"
+
+[[main]]
+  identifier = "search"
+  weight = 99
+  [main.params]
+    action = "search"
+
+[[main]]
+  identifier = "locale"
+  weight = 100
+  [main.params]
+    action = "locale"
+
+# -- Footer Menu --
+# The footer menu is displayed at the bottom of the page, just before
+# the copyright notice. Configure as per the main menu above.
+```
+### 创建第一篇博客文章
+
+在blog下建立2024目录，然后再建”20240414 Create a blog on github in 10 mins“目录，这篇文章所有的文件都会存在这个目录下面。
+
+新建index.zh-cn.md文件来写中文版本的文章，index.en.md文件是给英文版本的文章。
 
 [References]
