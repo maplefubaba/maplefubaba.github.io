@@ -31,7 +31,8 @@ fingerprintAlgorithm = "sha256"
   showScrollToTop = true
 
 [homepage]
-  layout = "custom" # valid options: page, profile, custom
+  #layout = "custom" # valid options: page, profile, custom
+  layout = "profile" # valid options: page, profile, custom
   showRecent = true
   recentLimit = 5
 
@@ -50,7 +51,7 @@ fingerprintAlgorithm = "sha256"
   showReadingTime = true
   showTableOfContents = true
   showTaxonomies = false
-  showWordCount = false
+  showWordCount = true
   showComments = false
   # sharingLinks = ["facebook", "twitter", "mastodon", "pinterest", "reddit", "linkedin", "email", "telegram", "line", "weibo"]
 

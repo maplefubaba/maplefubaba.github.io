@@ -4,6 +4,7 @@ date: 2019-03-06
 description: "Chart.js在Congo中的用法"
 summary: "Congo使用chart.js来提供强大的表格支持和数据可视化。"
 tags: ["chart", "sample", "graph", "shortcodes"]
+draft: true
 ---
 
 Congo 包含对 Chart.js 的支持，使用 `chart` 短代码即可。只需将图表标记包裹在短代码内。Congo 会自动根据配置的 `colorScheme` 参数为图表添加主题，但颜色可以使用常规的 Chart.js 语法进行自定义。
