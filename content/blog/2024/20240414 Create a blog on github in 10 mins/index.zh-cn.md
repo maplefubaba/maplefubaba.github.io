@@ -3,22 +3,25 @@ title: "10分钟在github上创建一个博客"
 date: 2024-04-14
 description: "这是怎么回事"
 summary: "如何在github上快速创建一个博客？"
-tags: ["git"]
+tags: ["git", "hugo", "congo"]
 ---
 
-## 准备
+## 提前准备
 
-说是10分钟，但是还是需要一点基础的。
+没有一点html甚至markdown基础的技术小白还是推荐用wordpress，毕竟点几下鼠标就可以了，10分钟也能搞定。github pages是基于静态页面，后来管理是用jekyll或者hugo这样的命令行工具。懂技术的程序员，至少能用git，可能会更喜欢github pages这种完全自己控制的模式。
 
-- 需要在github上有一个账号，这个博客用的是github的静态页面服务，创建账号是很容易的，大概5分钟。
-- 需要对git有一个基本的了解，应该对所有的程序员都不是问题，如果要不是程序员就需要花点时间学习一下了，估计要几个小时了解一下概念和实践一下。
-- 下载安装[hugo](https://gohugo.io)。hugo是一个可以动态生成和管理网页的工具，它是用google出品的golang编写的，所以速度比类似工具jekyll快一个数量级。点[这里](https://github.com/gohugoio/hugo/releases/latest)下载最新的执行文件hugo_extended_xxxxxxxx_windows-amd64.zip。解压这个文件在windows下就得到hugo.exe。
+标题说是10分钟可以创建一个博客，那是对懂技术的人才适用的，有以下几个准备工作要提前做好。
 
-hugo是一个命令行的工具，你可以把它下载以后在本地建立一个blog的目录，然后把hugo可执行文件hugo.exe拷到这个目录下运行就可以了。
+- 需要在github上有一个账号，我们创建的博客用的是github的静态页面服务github pages。
+- 需要对git有一个基本的了解，应该对程序员都不是问题，如果不是程序员就需要花点时间学习一下了，估计要几个小时了解一下概念和实践一下。
+- 下载[hugo](https://gohugo.io)。hugo是一个可以动态生成和管理网页的命令行工具，它是用google出品的golang编写的，所以速度比类似工具jekyll快一个数量级。点[这里](https://github.com/gohugoio/hugo/releases/latest)下载最新的执行文件hugo_extended_xxxxxxxx_windows-amd64.zip，解压这个文件在windows下就得到hugo.exe。
+- 在hugo的主题模板里选好一个主题theme。
+
+hugo是一个命令行的工具，你可以把它下载以后在本地建立一个blog的目录，然后把hugo可执行文件hugo.exe拷到这个目录下运行就可以了。我是把hugo拷贝到一个我创建的命令行工具库目录下，然后在环境变量里把这个目录加到工作目录下，所以在命令行可以直接执行。
 
 OK，假设现在你已经具备一下条件。
-- 你在github上已经创建账户myblog，github上空间网址www.github.com/myblog。
-- 选好一个hugo的主题congo。选择这个主题的原因是congo很简洁，而且直接支持双语。
+- 你在github上已经创建账户maplefubaba，github上空间网址www.github.com/maplefubaba。
+- 选好一个hugo的主题congo。选择这个主题的原因是congo很简洁，而且直接支持多种语言。
 - 
 
 ## 创建博客
@@ -69,7 +72,7 @@ hugo server
 ![Create new repo](create.new.repo.png)
 ![Steps to push](steps.to.push.png)
 
-### github上设定
+### github上的设置
 接着可以设定github上的actions，相当于自动在github的服务器上运行hugo来生成网页并且把他们放到github pages里面。
 
 下面是在github里面设置actions：
@@ -291,5 +294,7 @@ menus.en.toml
 在blog下建立2024目录，然后再建”20240414 Create a blog on github in 10 mins“目录，这篇文章所有的文件都会存在这个目录下面。
 
 新建index.zh-cn.md文件来写中文版本的文章，index.en.md文件是给英文版本的文章。
+
+写好文章以后，可以在本地运行命令hugo server来显示效果。
 
 [References]
